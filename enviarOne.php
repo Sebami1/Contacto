@@ -1,5 +1,8 @@
 <?php   
     //Capturo los datos enviados por POST desde el formulario
+    ini_set("SMTP", "wolfsotre.shop");
+    ini_set("smtp_port", "5847"); 
+
     $email               = $_REQUEST["email"]; 
     $nombreCompleto      = $_REQUEST["nombre"];
     $desdEmail           = 'programadorphp2017@gmail.com'; 
@@ -24,10 +27,12 @@
     $boundary            = md5("pera");
   
     //Encabezados
-    $headers             = "MIME-Version: 1.0\r\n"; 
-    $headers            .= "From:".$email."\r\n"; 
-    $headers            .= "Reply-To: ".$desdEmail."" . "\r\n";
-    $headers            .= "Content-Type: multipart/mixed; boundary = $boundary\r\n\r\n"; 
+    $headers = "MIME-Version: 1.0\r\n"; 
+    $headers .= "From: $email\r\n"; 
+    $headers .= "Reply-To: $desdEmail\r\n";
+    $headers .= "X-Mailer: PHP/" . phpversion() . "\r\n";
+    $headers .= "Content-Type: multipart/mixed; boundary=$boundary\r\n\r\n";
+
            
     //Texto plano
     $body               = "--$boundary\r\n";
