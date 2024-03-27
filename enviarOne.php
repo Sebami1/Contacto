@@ -5,11 +5,16 @@
 
     $email               = $_REQUEST["email"]; 
     $nombreCompleto      = $_REQUEST["nombre"];
-    $desdEmail           = 'programadorphp2017@gmail.com'; 
+    $mensaje             = $_REQUEST["mensaje"];
+
+    $desdEmail           = 'sebami@wolfstore.shop';
+    
    
     //Construyo el cuerpo del mensaje    
     $message            = "Nombre: " . $nombreCompleto . "\n";
     $message            = $message . "Email: " . $email . "\n";
+    $message            = $message . "Mensaje: " . $mensaje . "\n";
+
    
     //Obtener datos del archivo subido 
     $file_tmp_name      = $_FILES['my_file']['tmp_name'];
