@@ -50,4 +50,3 @@ if(mail($Para, $Asunto, $cuerpo, $Cabeceras)){
 	echo 'No se pudo enviar el correo.';
 }
 
-?>
