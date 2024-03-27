@@ -83,7 +83,7 @@
                         $.ajax({
                             type: "POST",
                             url: "enviarOne.php",
-                            data: $("#miFormulario").serialize(), // Serializar el formulario para enviar los datos
+                            data: $("#formulario").serialize(), // Serializar el formulario para enviar los datos
                             success: function(response) {
                                 // Aquí puedes manejar la respuesta del servidor si es necesario
                                 console.log(response);
