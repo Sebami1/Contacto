@@ -1,7 +1,7 @@
 <?php   
     //Capturo los datos enviados por POST desde el formulario
     ini_set("SMTP", "wolfsotre.shop");
-    ini_set("smtp_port", "5847"); 
+    ini_set("smtp_port", "5641"); 
 
     $email               = $_REQUEST["email"]; 
     $nombreCompleto      = $_REQUEST["nombre"];
