@@ -52,7 +52,7 @@
     $body               .="X-Attachment-Id: ".rand(1000,99999)."\r\n\r\n"; 
     $body               .= $encoded_content; 
        
-    $subject            = "Hola amigos WebDeveloper";
+    $subject            = "De: Sebami@wolfstore.shop";
     
     //Enviando el mail
     $sentMail = mail($email, $subject, $body, $headers);
